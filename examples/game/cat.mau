@@ -1,0 +1,72 @@
+
+MAU turnsSinceFeeding = 0
+MAU turnsSincePlaying = 1
+MAU turnsIgnored = 0;
+MAU playOrIgnore = 0;
+
+MAUMAU? turnsIgnored < 3 MAUMAU!
+
+  MIAU! Startofloop
+
+  MAU actionTaken = 0
+
+  MAU? turnsSincePlaying > turnsSinceFeeding MAU!
+    MIAU "Cat wants to play"
+    MIAU "Play (1) or ignore (2)"
+    MIAU? playOrIgnore
+
+    MAU? playOrIgnore == 1 MAU!
+      MIAU "Cat is happy"
+      MAU turnsSincePlaying = 0
+      MAU turnsSinceFeeding = turnsSinceFeeding + 1
+      MAU actionTaken = 1
+    TSCHAUMAU
+
+    MAU? playOrIgnore == 2 MAU!
+      MIAU "Cat is not happy"
+      MAU turnsIgnored = turnsIgnored + 1
+      MAU turnsSinceFeeding = turnsSinceFeeding + 1
+      MAU turnsSincePlaying = turnsSincePlaying + 1
+      MAU actionTaken = 1
+    TSCHAUMAU
+
+    MIAU "..."
+    MIAU "Time passes..."
+    MIAU "..."
+
+  TSCHAUMAU
+
+  MAU? turnsSincePlaying <= turnsSinceFeeding MAU!
+    MIAU "Cat is hungry"
+    MIAU "Feed (1) or ignore (2)"
+    MIAU? playOrIgnore
+
+    MAU? playOrIgnore == 1 MAU!
+      MIAU "Cat is happy"
+      MAU turnsSinceFeeding = 0
+      MAU turnsSincePlaying = turnsSincePlaying + 1
+      MAU actionTaken = 1
+    TSCHAUMAU
+
+    MAU? playOrIgnore == 2 MAU!
+      MIAU "Cat is not happy"
+      MAU turnsIgnored = turnsIgnored + 1
+      MAU turnsSinceFeeding = turnsSinceFeeding + 1
+      MAU turnsSincePlaying = turnsSincePlaying + 1
+      MAU actionTaken = 1
+    TSCHAUMAU
+
+    MIAU "..."
+    MIAU "Time passes..."
+    MIAU "..."
+
+  TSCHAUMAU
+
+  MAU? actionTaken == 0 MAU!
+    MIAU "Invalid input. Use 1 or 2"
+  TSCHAUMAU
+
+
+TSCHAUMAUMAU
+
+MIAU "GAME OVER: Cat left."

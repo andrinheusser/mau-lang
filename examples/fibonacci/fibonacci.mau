@@ -1,0 +1,13 @@
+MIAU "How many fibonacci numbers do you want?"
+MIAU? nums
+MIAU ""
+
+MAU a = 0
+MAU b = 1
+MAUMAU? nums > 0 MAUMAU!
+    MIAU a
+    MAU c = a + b
+    MAU a = b
+    MAU b = c
+    MAU nums = nums - 1
+TSCHAUMAUMAU

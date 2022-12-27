@@ -1,0 +1,19 @@
+# Compute average of given values.
+
+MAU a = 0
+MAUMAU? a < 1 MAUMAU!
+    MIAU "Enter number of scores: "
+    MIAU? a
+TSCHAUMAUMAU
+
+MAU b = 0
+MAU s = 0
+MIAU "Enter one value at a time: "
+MAUMAU? b < a MAUMAU!
+    MIAU? c
+    MAU s = s + c
+    MAU b = b + 1
+TSCHAUMAUMAU
+
+MIAU "Average: "
+MIAU s / a
